@@ -139,3 +139,68 @@ mkdir D:\FolderPenting
 xcopy D:\Data C:\Backup\ /E /H /C /I /Y
 
 ---
+
+# Verifikasi Hasil:
+✅ Cek folder SimulasiDrive_D di Desktop (sumber)
+✅ Cek folder SimulasiDrive_C di Desktop (backup)
+✅ Baca file recovery_log.txt
+
+# 🔧 Perintah CMD Penting
+
+# Navigasi Dasar
+---
+cmd
+
+dir # List isi folder
+cd NamaFolder # Masuk ke folder
+cd .. # Kembali ke folder parent
+cd \ # Ke root drive
+D: # Pindah ke drive D
+C: # Pindah ke drive C
+
+---
+
+# Manajemen file 
+
+---
+cmd
+
+copy source dest # Copy 1 file
+xcopy source dest /E # Copy folder + subfolder
+move source dest # Pindah file
+del namafile # Hapus file
+mkdir NamaFolder # Buat folder
+rmdir NamaFolder # Hapus folder
+
+---
+
+# informasi sistem 
+
+---
+cmd
+
+dir /s # List semua file recursive
+dir /b # List nama file saja
+tree # Tampilkan struktur folder
+echo %date% %time% # Tampilkan tanggal & waktu
+
+---
+
+# 💡 Skenario Real Bluescreen
+# Situasi Darurat:
+
+---
+❌ Windows tidak bisa boot normal
+❌ Safe Mode gagal
+❌ GUI tidak accessible
+✅ Command Prompt (CMD) masih bisa diakses via Recovery Environment
+
+---
+
+# Langkah Penyelamatan Data Real:
+
+# 1. Boot ke Recovery Environment
+Restart 3x paksa (tekan tombol power)
+Pilih "Advanced Options"
+Pilih "Command Prompt"
+# 2. Identifikasi Drive
