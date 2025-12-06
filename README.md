@@ -338,3 +338,78 @@ Preventif (Sebelum Bluescreen):
 # 🔍 Troubleshooting
 
 Error: "Access Denied"
+
+---
+cmd
+
+#Jalankan CMD sebagai Administrator
+
+#Atau gunakan parameter /G
+
+xcopy D:\Data C:\Backup /E /G
+
+---
+
+Error: "Insufficient Disk Space"
+
+---
+cmd
+
+#Cek space tersedia
+dir C:\ 
+
+#Compress file saat copy (jika Windows support)
+
+compact /c C:\Backup\*.*
+
+---
+
+# Error: "File in Use"
+
+---
+
+cmd
+
+#Skip file yang sedang digunakan
+
+xcopy D:\Data C:\Backup /E /C
+
+---
+
+# Proses Terlalu Lambat
+
+---
+cmd
+
+#Copy dengan multi-thread (Windows 10+)
+
+robocopy D:\Data C:\Backup /E /MT:16
+
+---
+
+# 📚 Referensi Command Line
+
+Dokumentasi Lengkap:
+
+xcopy /? - Help xcopy
+
+robocopy /? - Help robocopy (advanced)
+
+help - List semua perintah CMD
+
+# Alternatif Tool (Advanced):
+
+---
+cmd
+
+# Robocopy (lebih powerful dari xcopy)
+
+robocopy D:\Data C:\Backup /E /Z /MT:8 /LOG:backup.log
+
+#Parameter robocopy:
+
+#/Z - Copy dengan mode restart
+
+#/MT - Multi-threaded (lebih cepat)
+
+#/LOG - Simpan log detail
