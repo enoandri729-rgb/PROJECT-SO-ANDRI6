@@ -19,7 +19,7 @@ penting menggunakan command line.
 • Automasi tugas repetitif
 • Error handling dan logging
 
-Struktur Project
+# Struktur Project
 ---
 Total Data Simulasi:
 
@@ -68,6 +68,7 @@ Desktop/
 └── SimulasiDrive_C/ # Drive C (destinasi backup)
 
  └── DataRecovery_YYYYMMDD_HHMM/
-
+ 
  └── (hasil recovery)
+ 
  ---
