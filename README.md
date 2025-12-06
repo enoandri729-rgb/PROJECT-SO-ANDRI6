@@ -1,415 +1,91 @@
-# PROJECT-SO-ANDRI6
-PROJECT: SIMULASI DATA RECOVERY SAAT
-BLUESCREEN
-📋 Deskripsi Project
-Project ini mensimulasikan kondisi darurat dimana komputer mengalami bluescreen dan hanya
-Command Prompt (CMD) yang bisa diakses. Mahasiswa akan belajar teknik menyelamatkan data
-penting menggunakan command line.
-🎯 Tujuan Pembelajaran
-1. Memahami Command Line Interface (CLI)
-• Perintah dasar CMD Windows
-• Navigasi file system via command line
-2. Manajemen File dengan CMD
-• Copy file dan folder dengan struktur
-• Verifikasi integritas data
-3. Problem Solving
-• Analisis situasi darurat
-• Pengambilan keputusan cepat
-4. Batch Scripting
-• Automasi tugas repetitif
-• Error handling dan logging
-
-# Struktur Project
----
-Total Data Simulasi:
-10 Folder utama
-30 SubFolder (3 per folder)
-Desktop/
-├── SimulasiDrive_D/ # Drive D (sumber data)
-│ ├── Folder_1/
-│ │ ├── SubFolder_A/
-│ │ │ ├── dokumen_1_A.pdf
-│ │ │ ├── data_1_A.csv
-│ │ │ ├── catatan_1_A.txt
-│ │ │ ├── laporan_1_A.docx
-│ │ │ └── aplikasi_1_A.bat
-│ │ ├── SubFolder_B/
-│ │ │ └── (5 file berbagai format)
-│ │ ├── SubFolder_C/
-│ │ │ └── (6 file berbagai format)
-│ │ ├── database_1.db
-│ │ └── config_1.ini
-│ ├── Folder_2/
-│ │ └── (struktur sama, 3 subfolder)
-│ └── ... (hingga Folder_10)
-│
-└── SimulasiDrive_C/ # Drive C (destinasi backup)
- └── DataRecovery_YYYYMMDD_HHMM/
- └── (hasil recovery)
- 
- ---
-
- # Total Data Simulasi:
-
-10 Folder utama
-30 SubFolder (3 per folder)
-
-~180 File berbagai format
-
-# Format File:
-.pdf - Dokumen
-.csv - Data spreadsheet
-.txt - Text file
-.docx - Word document
-.bat - Batch script
-.py - Python script
-.db - Database file
-.ini - Configuration file
-# 🚀 Cara Menjalankan Project
-
-# CATATAN PENTING:
-
-Project ini TIDAK memerlukan download dari internet. Mahasiswa membuat file batch (.bat) sendiri dari nol atau menggunakan kode contoh yang sudah disediakan.
-
-# OPSI A: Buat Script Sendiri dari Nol (Pembelajaran Mendalam)
-
-Mahasiswa menulis sendiri batch script dengan cara:
-
-# 1. Buka Notepad
-# 2. Tulis kode batch sesuai kebutuhan:
-
-• Buat folder dengan mkdir
-Isi file dengan echo dan >
-• Copy data dengan xcopy
-
-# 3. Save dengan ekstensi .bat
-# 4. Test dan debug sendiri
-
-# Kelebihan: 
-Belajar lebih mendalam tentang batch scripting
-
-# OPSI B: Gunakan Kode Contoh (Lebih Cepat)
-
-Jika dosen menyediakan kode contoh (seperti artifact di atas), mahasiswa bisa:
-
-# Cara 1 - File Terpisah:
-
-# 1. Buat file setup:
-
-• Buka Notepad
-• Lihat artifact "Simulasi Data Recovery - Setup Environment"
-• Ketik ulang atau copy-paste kode tersebut
-• Save As → 1_setup_simulasi.bat (pilih "All Files")
-• Simpan di Desktop
-
-# 2. Buat file recovery:
-• Notepad baru
-• Lihat artifact "Solusi Data Recovery - Script CMD"
-• Ketik ulang atau copy-paste kode tersebut
-• Save As → 2_recovery_data.bat
-• Simpan di Desktop
-
-# 3. Jalankan:
-
-• Double-click 1_setup_simulasi.bat → tunggu selesai
-• Double-click 2_recovery_data.bat → lihat hasil
-
-# Cara 2 - File All-in-One (PALING MUDAH):
-
-# 1. Buat file:
-• Buka Notepad
-• Lihat artifact "All-in-One Batch Script"
-• Ketik ulang atau copy-paste kode tersebut
-• Save As → simulator.bat
-
-# 2. Jalankan & pilih menu:
-• Double-click simulator.bat
-• Ketik 1 → Enter (setup)
-• Ketik 2 → Enter (recovery)
-
-# OPSI C: Manual via CMD (Advanced)
-
-Mahasiswa yang sudah paham bisa langsung ketik command di CMD:
-
----
-cmd
-
-mkdir D:\FolderPenting
-
-xcopy D:\Data C:\Backup\ /E /H /C /I /Y
-
----
-
-# Verifikasi Hasil:
-✅ Cek folder SimulasiDrive_D di Desktop (sumber)
-✅ Cek folder SimulasiDrive_C di Desktop (backup)
-✅ Baca file recovery_log.txt
-
-# 🔧 Perintah CMD Penting
-
-# Navigasi Dasar
----
-cmd
-
-dir # List isi folder
-cd NamaFolder # Masuk ke folder
-cd .. # Kembali ke folder parent
-cd \ # Ke root drive
-D: # Pindah ke drive D
-C: # Pindah ke drive C
-
----
-
-# Manajemen file 
-
----
-cmd
-
-copy source dest # Copy 1 file
-xcopy source dest /E # Copy folder + subfolder
-move source dest # Pindah file
-del namafile # Hapus file
-mkdir NamaFolder # Buat folder
-rmdir NamaFolder # Hapus folder
-
----
-
-# informasi sistem 
-
----
-cmd
-
-dir /s # List semua file recursive
-dir /b # List nama file saja
-tree # Tampilkan struktur folder
-echo %date% %time% # Tampilkan tanggal & waktu
-
----
-
-# 💡 Skenario Real Bluescreen
-# Situasi Darurat:
-
----
-❌ Windows tidak bisa boot normal
-❌ Safe Mode gagal
-❌ GUI tidak accessible
-✅ Command Prompt (CMD) masih bisa diakses via Recovery Environment
-
----
-
-# Langkah Penyelamatan Data Real:
-
-# 1. Boot ke Recovery Environment
-Restart 3x paksa (tekan tombol power)
-Pilih "Advanced Options"
-Pilih "Command Prompt"
-# 2. Identifikasi Drive
-
----
-cmd 
-
-diskpart
-list volume
-exit
-
----
-
-(Cari drive D: dan C:)
-
-# 3. Copy Data Penting
-
----
-cmd
-
-xcopy D:\FolderPenting C:\Backup\ /E /H /C /I /Y
-
----
-
-# 4. Verifikasi
-
----
-cmd
-
-dir C:\Backup /s
- 
----
-
-# 5. Parameter Penting xcopy:
-
-• [/E] - Copy semua subfolder termasuk yang kosong
-
-• [/H] - Copy file hidden & system
-
-• [/C] - Lanjutkan meski ada error
-
-• [/I] - Asumsikan destination adalah folder
-
-• [/Y] - Overwrite tanpa konfirmasi
-
-
-# 📊 Tugas Mahasiswa
-
-# Tugas 1: Basic Recovery (Wajib)
-
-✅ Jalankan kedua script dan dokumentasikan:
-
-• Screenshot proses setup
-
-• Screenshot proses recovery
-
-• Isi file recovery_log.txt
-
-• Total waktu yang dibutuhkan
-
-# Tugas 2: Modifikasi Script (Intermediate)
-
-📝 Modifikasi 2_recovery_data.bat untuk:
-
-• Backup hanya file tertentu (misal: hanya .pdf dan .docx)
-
-• Tambahkan progress bar atau counter
-
-• Buat verifikasi checksum/file size
-
-• Compress hasil backup ke .zip
-
-# Tugas 3: Skenario Advanced (Challenge)
-
-🔥 Buat script baru untuk:
-
-• Selective Backup: User bisa pilih folder mana yang di-backup
-
-• Incremental Backup: Hanya backup file yang berubah
-
-• Scheduled Backup: Backup otomatis tiap X menit
-
-• Email Notification: Kirim notifikasi setelah backup selesai
-
-# Tugas 4: Analisis & Dokumentasi
-
-📄 Buat laporan mencakup:
-
-# 1. Analisis Masalah:
-
-• Penyebab umum bluescreen
-• Kenapa CMD masih bisa diakses?
-
-# 2. Solusi Alternatif:
-
-• Tool recovery data lainnya
-• Cloud backup sebagai preventif
-
-# 3. Best Practice:
-
-• Strategi backup 3-2-1 rule
-• Automasi backup rutin
-
-# 4. Kesimpulan:
-
-• Pembelajaran dari simulasi
-• Aplikasi di dunia nyata
-
-# 🛡 Tips Keamanan Data
-
+Tentu, saya akan membantu Anda memecah dan memberikan langkah-langkah untuk menyelesaikan tugas proyek simulasi data recovery saat bluescreen ini.
+Proyek ini bertujuan melatih keterampilan Command Line Interface (CLI) untuk penyelamatan data di lingkungan darurat (recovery environment) saat terjadi bluescreen.
+💻 Tugas Mahasiswa (Wajib)
+Tugas 1: Basic Recovery (Wajib)
+Tugas ini melibatkan menjalankan dua script dasar yang disediakan (atau dibuat) dan mendokumentasikannya.
+Langkah-Langkah:
+ * Buat Script Setup
+   * Buat file 1_setup_simulasi.bat (atau gunakan artifact yang disediakan) yang berisi perintah untuk membuat struktur folder simulasi (10 folder utama, 30 subfolder) di lokasi sumber, misalnya SimulasiDrive_D di Desktop, sesuai dengan struktur proyek yang diberikan. Gunakan perintah mkdir dan copy atau xcopy untuk membuat folder dan menyalin file-file contoh.
+ * Buat Script Recovery
+   * Buat file 2_recovery_data.bat (atau gunakan artifact yang disediakan) yang berisi perintah xcopy atau robocopy untuk menyalin data dari sumber (SimulasiDrive_D) ke lokasi backup tujuan (SimulasiDrive_C/DataRecovery_YYYYMMDD_HHMM).
+   * Perintah dasar xcopy yang disarankan:
+     xcopy D:\FolderPenting C:\Backup /E /H /C /I /Y
+
+     (Asumsikan D: adalah drive sumber simulasi dan C:\Backup adalah tujuan backup).
+ * Jalankan Script
+   * Jalankan 1_setup_simulasi.bat terlebih dahulu.
+   * Jalankan 2_recovery_data.bat. Catat waktu mulai dan waktu selesai proses recovery.
+ * Dokumentasi dan Verifikasi
+   * Screenshot proses setup (min. 5) dan proses recovery (min. 5).
+   * Buat/Isi file recovery_log.txt yang mencatat:
+     * Waktu total yang dibutuhkan untuk recovery.
+     * Detail setup dan hasil recovery (termasuk jumlah file yang disalin).
+   * Verifikasi data di folder tujuan: cek jumlah folder/subfolder dan file yang disalin.
+Tugas 2: Modifikasi Script (Intermediate)
+Modifikasi script recovery (2_recovery_data.bat) dengan menambahkan fitur-fitur berikut:
+ * Backup Terpilih: Modifikasi perintah copy agar hanya mem-backup file tertentu (misalnya, hanya .pdf dan .docx). Anda mungkin perlu menyesuaikan argumen xcopy atau menggunakan tool lain seperti robocopy yang lebih kuat.
+ * Progress Bar/Counter: Tambahkan mekanisme sederhana untuk menampilkan progress bar atau counter jumlah file yang telah di-copy (ini mungkin sulit dengan batch script murni, gunakan logika logging atau echo sederhana jika perlu).
+ * Verifikasi Checksum/File Size: Tambahkan langkah untuk membandingkan ukuran total file di sumber dan tujuan untuk verifikasi integritas data.
+ * Compress hasil backup ke .zip: Setelah copy selesai, gunakan tool kompresi command-line (jika tersedia di recovery environment simulasi) untuk mengarsipkan hasil backup.
+Tugas 💡 Tugas 3: Skenario Advanced (Challenge)
+Buat script baru untuk menangani skenario lanjutan:
+ * Selective Backup: Script meminta input dari user untuk memilih folder mana saja yang akan di-backup.
+ * Incremental Backup: Script hanya menyalin file yang berubah sejak backup terakhir (gunakan robocopy dengan parameter yang sesuai, seperti /XO, /XC, /XN, /L).
+ * Scheduled Backup: Buat mekanisme untuk menjalankan backup secara otomatis setiap X menit (di lingkungan Windows normal, ini menggunakan Task Scheduler; dalam konteks simulasi, jelaskan konsepnya).
+ * Email Notification: Tambahkan fungsi untuk mengirim notifikasi email setelah backup selesai (gunakan tool CLI eksternal jika memungkinkan, seperti Blat, atau jelaskan konsepnya).
+Tugas 📝 Tugas 4: Analisis & Dokumentasi
+Buat laporan yang mencakup poin-poin berikut:
+1. Analisis Masalah
+ * Penyebab umum bluescreen (misalnya, driver rusak, hardware gagal, registry korup).
+ * Mengapa CMD masih bisa diakses? (Karena Anda berada di Windows Recovery Environment atau WinRE, yang merupakan lingkungan minimal bootable terpisah dari Windows utama).
+2. Solusi Alternatif
+ * Tool recovery data lain (misalnya, Recuva, TestDisk, MiniTool Partition Wizard).
+ * Cloud backup sebagai langkah preventif (misalnya, Google Drive, OneDrive, Dropbox).
+3. Best Practice
+ * Strategi backup 3-2-1 Rule (jelaskan: 3 salinan, 2 media berbeda, 1 offsite backup). * Automasi backup rutin.
+4. Kesimpulan
+ * Pelajari tentang simulasi.
+ * Penerapan di dunia nyata (bagaimana CLI digunakan oleh profesional IT saat data recovery).
+📌 Penilaian Project
+Pastikan setiap aspek berikut tercakup dalam laporan dan file yang dikumpulkan:
+| Aspek | Bobot | Kriteria |
+|---|---|---|
+| Setup Simulasi | 15% | Berhasil membuat struktur folder. |
+| Recovery Data | 25% | Data tersalin lengkap & terverifikasi. |
+| Dokumentasi | 20% | Screenshot, log, analisis lengkap. |
+| Modifikasi Script | 20% | Improvisasi & kreativitas. |
+| Laporan Akhir | 20% | Analisis mendalam & kesimpulan. |
+🔑 Tips Keamanan Data (Ringkasan)
 Preventif (Sebelum Bluescreen):
-
-1. ✅ Backup rutin (harian/mingguan)
-2. ✅ Gunakan cloud storage (Google Drive, OneDrive)
-3. ✅ External HDD/SSD backup
-4. ✅ System restore point aktif
-5. ✅ Update Windows & driver rutin
-
-# Reaktif (Saat Bluescreen):
-
-1. 🔴 Jangan panic!
-2. 🔴 Catat kode error bluescreen
-3. 🔴 Boot ke Safe Mode dulu
-4. 🔴 Jika gagal, gunakan CMD Recovery
-5. 🔴 Backup data penting segera
-   
-# 3-2-1 Backup Rule:
-
-• 3 copy data (original + 2 backup)
-
-• 2 media berbeda (HDD + Cloud)
-
-• 1 offsite backup (Cloud/eksternal)
-
-# 🔍 Troubleshooting
-
-Error: "Access Denied"
-
----
-cmd
-
-#Jalankan CMD sebagai Administrator
-
-#Atau gunakan parameter /G
-
-xcopy D:\Data C:\Backup /E /G
-
----
-
-Error: "Insufficient Disk Space"
-
----
-cmd
-
-#Cek space tersedia
-dir C:\ 
-
-#Compress file saat copy (jika Windows support)
-
-compact /c C:\Backup\*.*
-
----
-
-# Error: "File in Use"
-
----
-
-cmd
-
-#Skip file yang sedang digunakan
-
-xcopy D:\Data C:\Backup /E /C
-
----
-
-# Proses Terlalu Lambat
-
----
-cmd
-
-#Copy dengan multi-thread (Windows 10+)
-
-robocopy D:\Data C:\Backup /E /MT:16
-
----
-
-# 📚 Referensi Command Line
-
-Dokumentasi Lengkap:
-
-xcopy /? - Help xcopy
-
-robocopy /? - Help robocopy (advanced)
-
-help - List semua perintah CMD
-
-# Alternatif Tool (Advanced):
-
----
-cmd
-
-# Robocopy (lebih powerful dari xcopy)
-
-robocopy D:\Data C:\Backup /E /Z /MT:8 /LOG:backup.log
-
-#Parameter robocopy:
-
-#/Z - Copy dengan mode restart
-
-#/MT - Multi-threaded (lebih cepat)
-
-#/LOG - Simpan log detail
+ * Backup rutin (harian/mingguan).
+ * Gunakan cloud storage (Google Drive, OneDrive).
+ * External HDD/SSD backup.
+ * System restore point aktif.
+ * Update Windows & driver rutin.
+Reaktif (Saat Bluescreen):
+ * Jangan panik!
+ * Catat kode error bluescreen.
+ * Boot ke Safe Mode dulu.
+ * Jika gagal, gunakan CMD Recovery.
+ * Backup data penting segera.
+🛠️ Panduan Command Line
+Perintah Penting (Dasar)
+| Kategori | Perintah | Deskripsi |
+|---|---|---|
+| Navigasi | dir | List isi folder. |
+|  | cd NamaFolder | Masuk ke folder. |
+|  | cd .. | Kembali ke folder parent. |
+| Manajemen File | copy source dest | Copy 1 file. |
+|  | xcopy source dest /E | Copy folder + subfolder. |
+|  | move source dest | Pindah file. |
+|  | mkdir NamaFolder | Buat folder. |
+| Identifikasi Drive | diskpart | Masuk ke tool manajemen disk. |
+|  | list volume | List semua drive. |
+Troubleshooting (Penting untuk Recovery)
+| Error | Solusi |
+|---|---|
+| Access Denied | Jalankan CMD sebagai Administrator. |
+| Insufficient Disk Space | Cek disk space tersedia (dir C:\) atau kompres file (compact /c C:\Backup\*.*). |
+| File in Use | Lewati file yang sedang digunakan (gunakan parameter xcopy /C atau robocopy /XF). |
+| Proses Terlalu Lambat | Gunakan tool multi-thread seperti robocopy /MT:16 (16 thread) untuk mempercepat proses. |
+Apakah Anda ingin saya memberikan contoh script batch dasar untuk 1_setup_simulasi.bat atau 2_recovery_data.bat?
