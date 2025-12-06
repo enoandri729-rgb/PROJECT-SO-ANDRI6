@@ -22,53 +22,95 @@ penting menggunakan command line.
 # Struktur Project
 ---
 Total Data Simulasi:
-
 10 Folder utama
-
 30 SubFolder (3 per folder)
-
 Desktop/
-
 ├── SimulasiDrive_D/ # Drive D (sumber data)
-
 │ ├── Folder_1/
-
 │ │ ├── SubFolder_A/
-
 │ │ │ ├── dokumen_1_A.pdf
-
 │ │ │ ├── data_1_A.csv
-
 │ │ │ ├── catatan_1_A.txt
-
 │ │ │ ├── laporan_1_A.docx
-
 │ │ │ └── aplikasi_1_A.bat
-
 │ │ ├── SubFolder_B/
-
 │ │ │ └── (5 file berbagai format)
-
 │ │ ├── SubFolder_C/
-
 │ │ │ └── (6 file berbagai format)
-
 │ │ ├── database_1.db
-
 │ │ └── config_1.ini
-
 │ ├── Folder_2/
-
 │ │ └── (struktur sama, 3 subfolder)
-
 │ └── ... (hingga Folder_10)
-
 │
-
 └── SimulasiDrive_C/ # Drive C (destinasi backup)
-
  └── DataRecovery_YYYYMMDD_HHMM/
- 
  └── (hasil recovery)
  
  ---
+
+ # Total Data Simulasi:
+
+10 Folder utama
+30 SubFolder (3 per folder)
+
+~180 File berbagai format
+
+# Format File:
+.pdf - Dokumen
+.csv - Data spreadsheet
+.txt - Text file
+.docx - Word document
+.bat - Batch script
+.py - Python script
+.db - Database file
+.ini - Configuration file
+# 🚀 Cara Menjalankan Project
+
+# CATATAN PENTING:
+
+Project ini TIDAK memerlukan download dari internet. Mahasiswa membuat file batch (.bat) sendiri dari nol atau menggunakan kode contoh yang sudah disediakan.
+
+# OPSI A: Buat Script Sendiri dari Nol (Pembelajaran Mendalam)
+
+Mahasiswa menulis sendiri batch script dengan cara:
+
+# 1. Buka Notepad
+# 2. Tulis kode batch sesuai kebutuhan:
+
+• Buat folder dengan mkdir
+Isi file dengan echo dan >
+• Copy data dengan xcopy
+
+# 3. Save dengan ekstensi .bat
+# 4. Test dan debug sendiri
+
+Kelebihan: Belajar lebih mendalam tentang batch scripting
+
+# OPSI B: Gunakan Kode Contoh (Lebih Cepat)
+
+Jika dosen menyediakan kode contoh (seperti artifact di atas), mahasiswa bisa:
+
+Cara 1 - File Terpisah:
+
+# 1. Buat file setup:
+
+Buka Notepad
+
+Lihat artifact "Simulasi Data Recovery - Setup Environment"
+
+Ketik ulang atau copy-paste kode tersebut
+
+Save As → 1_setup_simulasi.bat (pilih "All Files")
+
+Simpan di Desktop
+
+# 2. Buat file recovery:
+
+Notepad baru
+
+Lihat artifact "Solusi Data Recovery - Script CMD"
+
+Ketik ulang atau copy-paste kode tersebut
+
+Save As → 2_recovery_data.bat
