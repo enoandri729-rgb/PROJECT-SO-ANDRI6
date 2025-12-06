@@ -229,7 +229,8 @@ xcopy D:\FolderPenting C:\Backup\ /E /H /C /I /Y
 
 ---
 cmd
- dir C:\Backup /s
+
+dir C:\Backup /s
  
 ---
 
@@ -244,3 +245,96 @@ cmd
 • [/I] - Asumsikan destination adalah folder
 
 • [/Y] - Overwrite tanpa konfirmasi
+
+
+# 📊 Tugas Mahasiswa
+
+# Tugas 1: Basic Recovery (Wajib)
+
+✅ Jalankan kedua script dan dokumentasikan:
+
+• Screenshot proses setup
+
+• Screenshot proses recovery
+
+• Isi file recovery_log.txt
+
+• Total waktu yang dibutuhkan
+
+# Tugas 2: Modifikasi Script (Intermediate)
+
+📝 Modifikasi 2_recovery_data.bat untuk:
+
+• Backup hanya file tertentu (misal: hanya .pdf dan .docx)
+
+• Tambahkan progress bar atau counter
+
+• Buat verifikasi checksum/file size
+
+• Compress hasil backup ke .zip
+
+# Tugas 3: Skenario Advanced (Challenge)
+
+🔥 Buat script baru untuk:
+
+• Selective Backup: User bisa pilih folder mana yang di-backup
+
+• Incremental Backup: Hanya backup file yang berubah
+
+• Scheduled Backup: Backup otomatis tiap X menit
+
+• Email Notification: Kirim notifikasi setelah backup selesai
+
+# Tugas 4: Analisis & Dokumentasi
+
+📄 Buat laporan mencakup:
+
+# 1. Analisis Masalah:
+
+• Penyebab umum bluescreen
+• Kenapa CMD masih bisa diakses?
+
+# 2. Solusi Alternatif:
+
+• Tool recovery data lainnya
+• Cloud backup sebagai preventif
+
+# 3. Best Practice:
+
+• Strategi backup 3-2-1 rule
+• Automasi backup rutin
+
+# 4. Kesimpulan:
+
+• Pembelajaran dari simulasi
+• Aplikasi di dunia nyata
+
+# 🛡 Tips Keamanan Data
+
+Preventif (Sebelum Bluescreen):
+
+1. ✅ Backup rutin (harian/mingguan)
+2. ✅ Gunakan cloud storage (Google Drive, OneDrive)
+3. ✅ External HDD/SSD backup
+4. ✅ System restore point aktif
+5. ✅ Update Windows & driver rutin
+
+# Reaktif (Saat Bluescreen):
+
+1. 🔴 Jangan panic!
+2. 🔴 Catat kode error bluescreen
+3. 🔴 Boot ke Safe Mode dulu
+4. 🔴 Jika gagal, gunakan CMD Recovery
+5. 🔴 Backup data penting segera
+   
+# 3-2-1 Backup Rule:
+
+• 3 copy data (original + 2 backup)
+
+• 2 media berbeda (HDD + Cloud)
+
+• 1 offsite backup (Cloud/eksternal)
+
+# 🔍 Troubleshooting
+
+Error: "Access Denied"
