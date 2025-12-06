@@ -1,11 +1,11 @@
-Tentu, saya akan membantu Anda memecah dan memberikan langkah-langkah untuk menyelesaikan tugas proyek simulasi data recovery saat bluescreen ini.
-Proyek ini bertujuan melatih keterampilan Command Line Interface (CLI) untuk penyelamatan data di lingkungan darurat (recovery environment) saat terjadi bluescreen.
-💻 Tugas Mahasiswa (Wajib)
-Tugas 1: Basic Recovery (Wajib)
+# 💻 Tugas Mahasiswa (Wajib)
+# Tugas 1: Basic Recovery (Wajib)
 Tugas ini melibatkan menjalankan dua script dasar yang disediakan (atau dibuat) dan mendokumentasikannya.
-Langkah-Langkah:
+
+# Langkah-Langkah:
  * Buat Script Setup
    * Buat file 1_setup_simulasi.bat (atau gunakan artifact yang disediakan) yang berisi perintah untuk membuat struktur folder simulasi (10 folder utama, 30 subfolder) di lokasi sumber, misalnya SimulasiDrive_D di Desktop, sesuai dengan struktur proyek yang diberikan. Gunakan perintah mkdir dan copy atau xcopy untuk membuat folder dan menyalin file-file contoh.
+  
  * Buat Script Recovery
    * Buat file 2_recovery_data.bat (atau gunakan artifact yang disediakan) yang berisi perintah xcopy atau robocopy untuk menyalin data dari sumber (SimulasiDrive_D) ke lokasi backup tujuan (SimulasiDrive_C/DataRecovery_YYYYMMDD_HHMM).
    * Perintah dasar xcopy yang disarankan:
