@@ -204,3 +204,43 @@ Restart 3x paksa (tekan tombol power)
 Pilih "Advanced Options"
 Pilih "Command Prompt"
 # 2. Identifikasi Drive
+
+---
+cmd 
+
+diskpart
+list volume
+exit
+
+---
+
+(Cari drive D: dan C:)
+
+# 3. Copy Data Penting
+
+---
+cmd
+
+xcopy D:\FolderPenting C:\Backup\ /E /H /C /I /Y
+
+---
+
+# 4. Verifikasi
+
+---
+cmd
+ dir C:\Backup /s
+ 
+---
+
+# 5. Parameter Penting xcopy:
+
+• [/E] - Copy semua subfolder termasuk yang kosong
+
+• [/H] - Copy file hidden & system
+
+• [/C] - Lanjutkan meski ada error
+
+• [/I] - Asumsikan destination adalah folder
+
+• [/Y] - Overwrite tanpa konfirmasi
