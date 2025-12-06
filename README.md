@@ -85,32 +85,57 @@ Isi file dengan echo dan >
 # 3. Save dengan ekstensi .bat
 # 4. Test dan debug sendiri
 
-Kelebihan: Belajar lebih mendalam tentang batch scripting
+# Kelebihan: 
+Belajar lebih mendalam tentang batch scripting
 
 # OPSI B: Gunakan Kode Contoh (Lebih Cepat)
 
 Jika dosen menyediakan kode contoh (seperti artifact di atas), mahasiswa bisa:
 
-Cara 1 - File Terpisah:
+# Cara 1 - File Terpisah:
 
 # 1. Buat file setup:
 
-Buka Notepad
-
-Lihat artifact "Simulasi Data Recovery - Setup Environment"
-
-Ketik ulang atau copy-paste kode tersebut
-
-Save As → 1_setup_simulasi.bat (pilih "All Files")
-
-Simpan di Desktop
+• Buka Notepad
+• Lihat artifact "Simulasi Data Recovery - Setup Environment"
+• Ketik ulang atau copy-paste kode tersebut
+• Save As → 1_setup_simulasi.bat (pilih "All Files")
+• Simpan di Desktop
 
 # 2. Buat file recovery:
+• Notepad baru
+• Lihat artifact "Solusi Data Recovery - Script CMD"
+• Ketik ulang atau copy-paste kode tersebut
+• Save As → 2_recovery_data.bat
+• Simpan di Desktop
 
-Notepad baru
+# 3. Jalankan:
 
-Lihat artifact "Solusi Data Recovery - Script CMD"
+• Double-click 1_setup_simulasi.bat → tunggu selesai
+• Double-click 2_recovery_data.bat → lihat hasil
 
-Ketik ulang atau copy-paste kode tersebut
+# Cara 2 - File All-in-One (PALING MUDAH):
 
-Save As → 2_recovery_data.bat
+# 1. Buat file:
+• Buka Notepad
+• Lihat artifact "All-in-One Batch Script"
+• Ketik ulang atau copy-paste kode tersebut
+• Save As → simulator.bat
+
+# 2. Jalankan & pilih menu:
+• Double-click simulator.bat
+• Ketik 1 → Enter (setup)
+• Ketik 2 → Enter (recovery)
+
+# OPSI C: Manual via CMD (Advanced)
+
+Mahasiswa yang sudah paham bisa langsung ketik command di CMD:
+
+---
+cmd
+
+mkdir D:\FolderPenting
+
+xcopy D:\Data C:\Backup\ /E /H /C /I /Y
+
+---
