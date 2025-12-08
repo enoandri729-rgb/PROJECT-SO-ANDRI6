@@ -1,91 +1,47 @@
-# 💻 Tugas Mahasiswa (Wajib)
-# Tugas 1: Basic Recovery (Wajib)
-Tugas ini melibatkan menjalankan dua script dasar yang disediakan (atau dibuat) dan mendokumentasikannya.
-
-# Langkah-Langkah:
- * Buat Script Setup
-   * Buat file 1_setup_simulasi.bat (atau gunakan artifact yang disediakan) yang berisi perintah untuk membuat struktur folder simulasi (10 folder utama, 30 subfolder) di lokasi sumber, misalnya SimulasiDrive_D di Desktop, sesuai dengan struktur proyek yang diberikan. Gunakan perintah mkdir dan copy atau xcopy untuk membuat folder dan menyalin file-file contoh.
-  
- * Buat Script Recovery
-   * Buat file 2_recovery_data.bat (atau gunakan artifact yang disediakan) yang berisi perintah xcopy atau robocopy untuk menyalin data dari sumber (SimulasiDrive_D) ke lokasi backup tujuan (SimulasiDrive_C/DataRecovery_YYYYMMDD_HHMM).
-   * Perintah dasar xcopy yang disarankan:
-     xcopy D:\FolderPenting C:\Backup /E /H /C /I /Y
-
-     (Asumsikan D: adalah drive sumber simulasi dan C:\Backup adalah tujuan backup).
- * Jalankan Script
-   * Jalankan 1_setup_simulasi.bat terlebih dahulu.
-   * Jalankan 2_recovery_data.bat. Catat waktu mulai dan waktu selesai proses recovery.
- * Dokumentasi dan Verifikasi
-   * Screenshot proses setup (min. 5) dan proses recovery (min. 5).
-   * Buat/Isi file recovery_log.txt yang mencatat:
-     * Waktu total yang dibutuhkan untuk recovery.
-     * Detail setup dan hasil recovery (termasuk jumlah file yang disalin).
-   * Verifikasi data di folder tujuan: cek jumlah folder/subfolder dan file yang disalin.
-Tugas 2: Modifikasi Script (Intermediate)
-Modifikasi script recovery (2_recovery_data.bat) dengan menambahkan fitur-fitur berikut:
- * Backup Terpilih: Modifikasi perintah copy agar hanya mem-backup file tertentu (misalnya, hanya .pdf dan .docx). Anda mungkin perlu menyesuaikan argumen xcopy atau menggunakan tool lain seperti robocopy yang lebih kuat.
- * Progress Bar/Counter: Tambahkan mekanisme sederhana untuk menampilkan progress bar atau counter jumlah file yang telah di-copy (ini mungkin sulit dengan batch script murni, gunakan logika logging atau echo sederhana jika perlu).
- * Verifikasi Checksum/File Size: Tambahkan langkah untuk membandingkan ukuran total file di sumber dan tujuan untuk verifikasi integritas data.
- * Compress hasil backup ke .zip: Setelah copy selesai, gunakan tool kompresi command-line (jika tersedia di recovery environment simulasi) untuk mengarsipkan hasil backup.
-Tugas 💡 Tugas 3: Skenario Advanced (Challenge)
-Buat script baru untuk menangani skenario lanjutan:
- * Selective Backup: Script meminta input dari user untuk memilih folder mana saja yang akan di-backup.
- * Incremental Backup: Script hanya menyalin file yang berubah sejak backup terakhir (gunakan robocopy dengan parameter yang sesuai, seperti /XO, /XC, /XN, /L).
- * Scheduled Backup: Buat mekanisme untuk menjalankan backup secara otomatis setiap X menit (di lingkungan Windows normal, ini menggunakan Task Scheduler; dalam konteks simulasi, jelaskan konsepnya).
- * Email Notification: Tambahkan fungsi untuk mengirim notifikasi email setelah backup selesai (gunakan tool CLI eksternal jika memungkinkan, seperti Blat, atau jelaskan konsepnya).
-Tugas 📝 Tugas 4: Analisis & Dokumentasi
-Buat laporan yang mencakup poin-poin berikut:
-1. Analisis Masalah
- * Penyebab umum bluescreen (misalnya, driver rusak, hardware gagal, registry korup).
- * Mengapa CMD masih bisa diakses? (Karena Anda berada di Windows Recovery Environment atau WinRE, yang merupakan lingkungan minimal bootable terpisah dari Windows utama).
-2. Solusi Alternatif
- * Tool recovery data lain (misalnya, Recuva, TestDisk, MiniTool Partition Wizard).
- * Cloud backup sebagai langkah preventif (misalnya, Google Drive, OneDrive, Dropbox).
-3. Best Practice
- * Strategi backup 3-2-1 Rule (jelaskan: 3 salinan, 2 media berbeda, 1 offsite backup). * Automasi backup rutin.
-4. Kesimpulan
- * Pelajari tentang simulasi.
- * Penerapan di dunia nyata (bagaimana CLI digunakan oleh profesional IT saat data recovery).
-📌 Penilaian Project
-Pastikan setiap aspek berikut tercakup dalam laporan dan file yang dikumpulkan:
-| Aspek | Bobot | Kriteria |
-|---|---|---|
-| Setup Simulasi | 15% | Berhasil membuat struktur folder. |
-| Recovery Data | 25% | Data tersalin lengkap & terverifikasi. |
-| Dokumentasi | 20% | Screenshot, log, analisis lengkap. |
-| Modifikasi Script | 20% | Improvisasi & kreativitas. |
-| Laporan Akhir | 20% | Analisis mendalam & kesimpulan. |
-🔑 Tips Keamanan Data (Ringkasan)
-Preventif (Sebelum Bluescreen):
- * Backup rutin (harian/mingguan).
- * Gunakan cloud storage (Google Drive, OneDrive).
- * External HDD/SSD backup.
- * System restore point aktif.
- * Update Windows & driver rutin.
-Reaktif (Saat Bluescreen):
- * Jangan panik!
- * Catat kode error bluescreen.
- * Boot ke Safe Mode dulu.
- * Jika gagal, gunakan CMD Recovery.
- * Backup data penting segera.
-🛠️ Panduan Command Line
-Perintah Penting (Dasar)
-| Kategori | Perintah | Deskripsi |
-|---|---|---|
-| Navigasi | dir | List isi folder. |
-|  | cd NamaFolder | Masuk ke folder. |
-|  | cd .. | Kembali ke folder parent. |
-| Manajemen File | copy source dest | Copy 1 file. |
-|  | xcopy source dest /E | Copy folder + subfolder. |
-|  | move source dest | Pindah file. |
-|  | mkdir NamaFolder | Buat folder. |
-| Identifikasi Drive | diskpart | Masuk ke tool manajemen disk. |
-|  | list volume | List semua drive. |
-Troubleshooting (Penting untuk Recovery)
-| Error | Solusi |
+# PROYEK-SO-ANDRI6
+# 1. Tugas 1: Basic Recovery (Wajib) 💾
+Tugas ini mensimulasikan kondisi darurat di mana Anda harus menyelamatkan data penting menggunakan Command Prompt (CMD). Anda akan menjalankan dua batch script (.bat) untuk mengatur lingkungan dan melakukan pemulihan data dasar.
+# A. Persiapan Lingkungan (Setup)
+ * Buat File Setup: Buat batch script bernama 1_setup_simulasi.bat di Desktop. Skrip ini harus berisi perintah untuk membuat struktur folder simulasi, yaitu SimulasiDrive_D (sumber data) dan SimulasiDrive_C (destinasi backup).
+ * Jalankan Setup: Double-click 1_setup_simulasi.bat. Pastikan struktur folder (10 folder utama, 30 subfolder, ~180 file berbagai format) terbuat sempurna di Desktop Anda.
+ * Dokumentasi: Ambil Screenshot proses setup.
+# B. Proses Pemulihan Data (Recovery)
+ * Buat File Recovery: Buat batch script bernama 2_recovery_data.bat di Desktop. Skrip ini harus menggunakan perintah copy tingkat lanjut seperti xcopy atau robocopy untuk menyalin data dari SimulasiDrive_D ke folder backup di SimulasiDrive_C.
+   * Gunakan parameter penting xcopy seperti /E (salin subfolder), /H (salin hidden & system file), dan /C (lanjutkan meski ada error).
+   * Pastikan skrip mencatat semua aktivitas ke dalam file recovery_log.txt.
+ * Jalankan Recovery: Double-click 2_recovery_data.bat.
+ * Dokumentasi:
+   * Ambil Screenshot proses recovery.
+   * Catat Total waktu yang dibutuhkan.
+# C. Verifikasi dan Pelaporan
+ * Verifikasi: Cek folder SimulasiDrive_C (destinasi backup) dan bandingkan dengan SimulasiDrive_D (sumber) untuk memastikan data tersalin lengkap dan terverifikasi.
+ * Log: Baca dan lampirkan isi file recovery_log.txt.
+# 2. Tugas 2: Modifikasi Script (Intermediate) 🛠️
+Modifikasi file 2_recovery_data.bat untuk meningkatkan fungsionalitasnya.
+| Modifikasi yang Diperlukan | Strategi Implementasi |
 |---|---|
-| Access Denied | Jalankan CMD sebagai Administrator. |
-| Insufficient Disk Space | Cek disk space tersedia (dir C:\) atau kompres file (compact /c C:\Backup\*.*). |
-| File in Use | Lewati file yang sedang digunakan (gunakan parameter xcopy /C atau robocopy /XF). |
-| Proses Terlalu Lambat | Gunakan tool multi-thread seperti robocopy /MT:16 (16 thread) untuk mempercepat proses. |
-Apakah Anda ingin saya memberikan contoh script batch dasar untuk 1_setup_simulasi.bat atau 2_recovery_data.bat?
+| Backup hanya file tertentu | Gunakan xcopy atau robocopy dengan wildcard *.pdf atau *.docx untuk menyaring file. |
+| Tambahkan progress bar/counter | Gunakan ROBOCOPY karena ia lebih informatif dan mendukung multi-threaded copy (/MT:16) yang mempercepat proses. |
+| Buat verifikasi checksum/file size | Gunakan perintah dir /s untuk membandingkan jumlah dan ukuran file, atau pertimbangkan robocopy yang memiliki fitur verifikasi integritas. |
+| Compress hasil backup ke .zip | Karena CMD standar tidak mendukung kompresi .zip, opsi termudah adalah menggunakan compact /c untuk mengompresi file di level NTFS (jika didukung). |
+# 3. Tugas 3: Skenario Advanced (Challenge) 🧠
+Buat script baru untuk menangani skenario pemulihan data yang lebih kompleks.
+ * Selective Backup: Buat menu menggunakan perintah SET /P untuk menerima input pengguna dan struktur IF/GOTO untuk menjalankan backup hanya pada folder yang dipilih oleh pengguna.
+ * Incremental Backup: Gunakan perintah ROBOCOPY dengan parameter yang hanya menyalin file yang baru atau berubah sejak backup terakhir (Robocopy secara bawaan melakukan incremental copy yang efisien).
+ * Scheduled Backup: Skrip batch yang dibuat dapat diintegrasikan dengan Windows Task Scheduler agar berjalan secara otomatis pada interval waktu tertentu (misalnya, setiap X menit).
+ * Email Notification: Memerlukan pemanggilan bahasa scripting yang lebih kuat seperti PowerShell (menggunakan cmdlet Send-MailMessage) dari dalam skrip batch untuk mengirim notifikasi setelah proses backup selesai.
+# 4. Tugas 4: Analisis & Dokumentasi 📝
+Buat laporan akhir yang mencakup analisis mendalam dan kesimpulan dari proyek.
+# A. Analisis Masalah
+ * Penyebab Bluescreen: Jelaskan penyebab umum layar biru (misalnya, driver yang rusak, masalah hardware, atau corrupted system files).
+ * Akses CMD: Jelaskan mengapa Command Prompt masih dapat diakses (biasanya melalui Windows Recovery Environment meskipun GUI Windows gagal boot).
+# B. Solusi Alternatif
+ * Ulas tool pemulihan data lain yang tersedia (misalnya, tool GUI, atau tool CMD yang lebih kuat seperti Robocopy).
+ * Jelaskan peran Cloud backup sebagai tindakan pencegahan (preventif).
+# C. Best Practice
+ * Jelaskan dan diskusikan 3-2-1 Backup Rule (3 copy data, 2 media berbeda, 1 offsite backup).
+ * Tekankan pentingnya automasi backup rutin dan system restore point.
+# D. Kesimpulan
+ * Rangkum pembelajaran yang didapat dari simulasi.
+ * Jelaskan aplikasi skill command line ini di dunia nyata sebagai seorang IT Professional.
+ * 
